@@ -12,6 +12,7 @@ export class OpenAccountPage {
   }
 
   async navigateToOpenAccount() {
+    await expect(this.openNewAccountLink).toBeVisible();
     await this.openNewAccountLink.click();
   }
 

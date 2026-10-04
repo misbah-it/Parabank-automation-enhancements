@@ -15,6 +15,7 @@ export class TransferFundsPage {
   }
 
   async navigateToTransferFunds() {
+    await expect(this.transferFundsLink).toBeVisible();
     await this.transferFundsLink.click();
   }
 
