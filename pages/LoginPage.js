@@ -15,9 +15,12 @@ class LoginPage {
   }
 
   async login(username, password) {
+    await expect(this.usernameInput).toBeVisible();
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
+    await expect(this.loginButton).toBeVisible();
     await this.loginButton.click();
+    await expect(this.welcomeText).toBeVisible();
   }
 
   async verifyWelcomeMessage(firstName, lastName) {

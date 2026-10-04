@@ -21,6 +21,7 @@ class RegistrationPage {
     this.successMessage = page.locator('#rightPanel p');
   }
   async navigateToRegister() {
+    await expect(this.registerLink).toBeVisible();
     await this.registerLink.click();
   }
 
@@ -39,6 +40,7 @@ class RegistrationPage {
   }
 
   async submitForm() {
+    await expect(this.registerButton).toBeVisible();
     await this.registerButton.click();
   }
 

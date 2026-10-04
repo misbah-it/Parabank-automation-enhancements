@@ -9,10 +9,12 @@ export class AccountsOverviewPage {
   }
 
   async navigateToAccountsOverview() {
+    await expect(this.accountsOverviewLink).toBeVisible();
     await this.accountsOverviewLink.click();
   }
 
   async openFirstAccount() {
+    await expect(this.firstAccountLink).toBeVisible();
     await this.firstAccountLink.click();
   }
 
