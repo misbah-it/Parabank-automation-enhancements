@@ -35,7 +35,7 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     /* Added headed mode */
-    headless: false,
+    headless: !!process.env.CI,
   },
 
   /* Configure projects for major browsers */
